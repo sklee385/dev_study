@@ -1,5 +1,8 @@
-# ssl 연장 
-- [가비아ssl연장](#가비아ssl연장)
+# ssl
+## 목록 
+1. [가비아ssl연장](#가비아ssl연장)
+2. [key생성](#key생성)
+
 
 ## 가비아ssl연장
 1. 가비아 로그인 
@@ -20,7 +23,7 @@
         - 도메인_csr.pem
     - Seal_sample.zip               // 이건 무시 해도 됨 
 
-7. 서버에 ssl 적용
+7. 서버에 ssl 적용  
 참고 사이트 : https://www.comodossl.co.kr/certificate/ssl-installation-guides/Apache-csr-crt.aspx
     ```conf
     # 포트는 변경 가능
@@ -56,3 +59,12 @@
     CustomLog logs/https.www.bizring.net.ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
     </VirtualHost>
     ```
+
+## key생성
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -keyout private_key.pem -out public_key.pem -subj '/'
+```
+패스워드 없애기     
+```bash
+openssl rsa -in www_sytechnology_co_kr.pem -out www_sytechnology_co_kr_nopass.key
+```
