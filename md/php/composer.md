@@ -1,8 +1,12 @@
 # composer 
 
 ## 목록 
+1. [참고사이트](#참고사이트)
 1. [composer](#composer)
-2. [설치](설치)
+1. [설치](설치)
+
+## 참고사이트
+http://xpressengine.github.io/Composer-korean-docs/doc/01-basic-usage.md/
 
 ## composer
 php 의존성 관리도구     
@@ -35,4 +39,3 @@ node 의 package.json 과 같은 것
         > npm install 과 동일한 명령어
     - composer update 
         > composer.json 변경시 update로 패키지 업데이트
-    - 
